@@ -30,7 +30,7 @@ public class ProductController {
     public ResponseEntity<?> getProductByName(@PathVariable String name) {
             Product product = productService.findByName(name)
                     .orElseThrow(() -> new ProductNotFoundException("Product not found with name: " + name));
-            return new ResponseEntity<>(product, HttpStatus.OK);
+            return ResponseEntity.ok(product);
     }
 
     @PostMapping("/addProduct")

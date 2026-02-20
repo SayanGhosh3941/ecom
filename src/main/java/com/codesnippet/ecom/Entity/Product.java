@@ -21,7 +21,7 @@ public class Product {
     @Min(value = 0, message = "Value must be greater than 0")
     @Max(value = 100, message = "Value should be less tha 100")
     private Integer price;
-    @Size(max=5, message = "Description cannot exceed 5 characters")
+    @Size(max=50, message = "Description cannot exceed 5 characters")
     private String description;
     private Integer stock;
 
